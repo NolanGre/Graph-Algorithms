@@ -1,4 +1,4 @@
-import list_prims_algorithm.Vertex;
+import list_prims.Vertex;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package matrix_prims_algorithm;
+package matrix_prim;
 
 public class Prim {
     public static void main(String[] args) {

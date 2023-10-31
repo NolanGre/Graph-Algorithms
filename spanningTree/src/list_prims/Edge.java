@@ -1,4 +1,4 @@
-package list_prims_algorithm;
+package list_prims;
 
 public class Edge {
     private int weight;
