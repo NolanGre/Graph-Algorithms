@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GraphAlgo.iml" filepath="$PROJECT_DIR$/GraphAlgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shortestPath/shortestPath.iml" filepath="$PROJECT_DIR$/shortestPath/shortestPath.iml" />
       <module fileurl="file://$PROJECT_DIR$/spanningTree/spanningTree.iml" filepath="$PROJECT_DIR$/spanningTree/spanningTree.iml" />
     </modules>
   </component>

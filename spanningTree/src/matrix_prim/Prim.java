@@ -3,15 +3,19 @@ package matrix_prim;
 public class Prim {
     public static void main(String[] args) {
 
-        int inf = Integer.MAX_VALUE;  // for edge that not exist
+        int f = Integer.MAX_VALUE;  // for edge what not exist
 
-        int[] A = {inf, 5,   10,  inf, 2};
-        int[] B = {5,   inf, inf, 1,   inf};
-        int[] C = {10,  inf, inf, 6,   4};
-        int[] D = {inf, 1,   6,   inf, inf};
-        int[] E = {2,   inf, 4,   inf, inf};
+        int[] A = {f, 4, 1, 4, f, f, f, f};
+        int[] B = {4, f, f, f, 7, 3, f, f};
+        int[] C = {1, f, f, 5, f, 5, f, 4};
+        int[] D = {4, f, 5, f, 1, f, f, f};
+        int[] E = {f, 7, f, 1, f, f, 4, f};
+        int[] F = {f, 3, 5, f, f, f, 6, f};
+        int[] G = {f, f, f, f, 4, 6, f, 5};
+        int[] H = {f, f, 4, f, f, f, 5, f};
 
-        int[][] initialMatrix ={A, B, C, D, E};
+        // rename vertex (from 1,2,3... to A,B,C...)
+        int[][] initialMatrix ={A, B, C, D, E, F, G, H};
 
         System.out.println("Initial matrix: " + stringArr(initialMatrix));
         System.out.println("MST matrix: " + stringArr(mst(initialMatrix)));
@@ -24,8 +28,6 @@ public class Prim {
         boolean[] isCompleted = new boolean[n];
 
         isCompleted[0] = true;  // set first vertex as included
-
-        //System.out.println(boolPrint(isCompleted));
 
         while (!checkComp(isCompleted)) {
 
@@ -41,8 +43,6 @@ public class Prim {
                     minI = i;
                     minJ = i;
                 }
-
-                //System.out.println("take vertex: " + i);
 
                 for (int j = 0; j < n; j++) {
 
@@ -61,7 +61,7 @@ public class Prim {
             isCompleted[minJ] = true;
             mstMatrix[minI][minJ] = initMatrix[minI][minJ];
 
-            // mirror write for notOriented grap
+            // mirror write for notOriented graph
             mstMatrix[minJ][minI] = initMatrix[minI][minJ];
 
         }
