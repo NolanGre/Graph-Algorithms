@@ -34,7 +34,7 @@ public class Dijkstra {
 
         System.out.println('\n' + shortestPath.toString());
 
-        findPath('1', '8');
+        findPath('1', '4');
     }
 
     public static char dijkstra(char vertex) {
